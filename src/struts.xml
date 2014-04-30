@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package
+		name="default"
+		extends="struts-default"
+		namespace="/">
+		<interceptors>
+			<interceptor
+				name="firstInterceptor"
+				class="pack.FirstInterceptor" />
+			<interceptor
+				name="secondInterceptor"
+				class="pack.SecondInterceptor" />
+		</interceptors>
+		<action
+			name="AutoComplete"
+			class="pack.AutoCompleteAction">
+			<result name="success">autoComplete.jsp</result>
+		</action>
+		<action
+			name="fileUpload"
+			class="pack.UploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1048576</param>
+				<param name="allowedTypes">image/png,image/gif,image/jpeg,image/pjpeg</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="success">uploadSucceed.jsp</result>
+			<result name="input">fileUpload.jsp</result>
+		</action>
+		<action
+			name="dummy"
+			class="pack.DummyAction">
+			<interceptor-ref name="firstInterceptor" />
+			<interceptor-ref name="secondInterceptor" />
+			<result name="success">dummy.jsp</result>
+		</action>
+		<action
+			name="login"
+			class="pack.LoginAction">
+			<result name="success">welcome.jsp</result>
+			<result name="input">login.jsp</result>
+		</action>
+		<action
+			name="getFirst"
+			class="pack.FirstAction">
+			<result name="success">first.jsp</result>
+		</action>
+	</package>
+</struts>
