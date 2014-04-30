@@ -21,15 +21,15 @@
 			<result name="success">autoComplete.jsp</result>
 		</action>
 		<action
-			name="fileUpload"
-			class="pack.UploadAction">
-			<interceptor-ref name="fileUpload">
-				<param name="maximumSize">1048576</param>
-				<param name="allowedTypes">image/png,image/gif,image/jpeg,image/pjpeg</param>
-			</interceptor-ref>
-			<interceptor-ref name="defaultStack" />
-			<result name="success">uploadSucceed.jsp</result>
-			<result name="input">fileUpload.jsp</result>
+			name="getFirst"
+			class="pack.FirstAction">
+			<result name="success">first.jsp</result>
+		</action>
+		<action
+			name="login"
+			class="pack.LoginAction">
+			<result name="success">welcome.jsp</result>
+			<result name="input">login.jsp</result>
 		</action>
 		<action
 			name="dummy"
@@ -39,15 +39,15 @@
 			<result name="success">dummy.jsp</result>
 		</action>
 		<action
-			name="login"
-			class="pack.LoginAction">
-			<result name="success">welcome.jsp</result>
-			<result name="input">login.jsp</result>
-		</action>
-		<action
-			name="getFirst"
-			class="pack.FirstAction">
-			<result name="success">first.jsp</result>
+			name="fileUpload"
+			class="pack.UploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1048576</param>
+				<param name="allowedTypes">image/png,image/gif,image/jpeg,image/pjpeg</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="success">uploadSucceed.jsp</result>
+			<result name="input">fileUpload.jsp</result>
 		</action>
 	</package>
 </struts>
