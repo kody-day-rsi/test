@@ -16,7 +16,7 @@
 				class="pack.SecondInterceptor" />
 		</interceptors>
 		<action
-			name="AutoComplete"
+			name="autoComplete"
 			class="pack.AutoCompleteAction">
 			<result name="success">autoComplete.jsp</result>
 		</action>

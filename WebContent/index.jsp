@@ -17,7 +17,7 @@
 	<br>
 	<a href="fileUpload.jsp">Structs Upload Demo</a>
 	<br>
-	<a href="autoComplete.jsp">Structs AJAX Demo</a>
+	<a href="autoComplete">Structs AJAX Demo</a>
 	<br>
 </body>
 </html>
