@@ -7,7 +7,7 @@
 <title>Structs 2 Tutorial</title>
 </head>
 <body>
-	This is the main page of the tutorial
+	This is the main page of the tutorial.
 	<br>
 	<a href="getFirst">Structs Action Demo</a>
 	<br>
